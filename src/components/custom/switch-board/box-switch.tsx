@@ -16,7 +16,7 @@ function BoxSwitch({ state = 'off', ...props }: Props) {
           'transition-all duration-5000 rounded w-[2px] h-[2px]',
           {
             'bg-slate-950': state === 'off',
-            'bg-emerald-300 shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] ring-2 ring-opacity-15': state === 'high', // Custom glow shadow
+            'bg-emerald-300 shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] ring-2 ring-opacity-15': state === 'high',
             'animate-pulse': state === 'high',
           },
         )}

@@ -1,12 +1,13 @@
 'use client'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 import React from 'react'
 import BoxSwitch from './box-switch'
 import { useBoard } from './use-switch-board'
 
 function SwitchBoard() {
-  const { board, cycleLight } = useBoard({ x: 20, y: 5 })
+  const { board, cycleLight } = useBoard({ x: 20, y: 10 })
 
   const handleClick = (row: number, col: number) => {
     cycleLight(row, col)
@@ -28,11 +29,11 @@ function SwitchBoard() {
             </div>
           ))}
         </div>
-        <CardTitle className="pt-2">Stars?</CardTitle>
       </CardHeader>
-      <CardContent className="text-wrap break-words">
-        <p>Lorem ipsum dolor sit amet </p>
-        <p>adipisicing elit. In aperiam velit hic!</p>
+      <CardContent className="space-y-2">
+        <CardTitle className="pt-2">Stars?</CardTitle>
+        <Separator />
+        <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste maiores explicabo magni!</p>
       </CardContent>
     </Card>
 

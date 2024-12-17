@@ -1,5 +1,7 @@
+import ResponsiveBoard from '@/components/custom/responsive-board'
 import SwitchBoard from '@/components/custom/switch-board'
 import WebBoard from '@/components/custom/web-board'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function Home() {
   return (
@@ -12,10 +14,16 @@ export default function Home() {
           <span className="text-green-600"> full-stack developer</span>
         </p>
       </div>
-      <div className="flex lg:flex-row flex-col gap-2">
-        <WebBoard />
-        <SwitchBoard />
-      </div>
+      <Card className="bg-slate-50">
+        <CardHeader>
+          <CardTitle className="text-2xl font-medium">Lorem ipsum dolor sit.</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-row justify-end items-center space-x-2">
+          <WebBoard />
+          <SwitchBoard />
+          <ResponsiveBoard />
+        </CardContent>
+      </Card>
       {/* Stacks */}
 
       {/* About  */}
